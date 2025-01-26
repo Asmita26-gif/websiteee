@@ -1,0 +1,36 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var win;
+        //open window
+        function createWindow()
+        {
+            win=window.open("", "My window", "width=500, height=200");
+        }
+        function showAlert()
+        {
+            if(win==undefined){
+                //show alert in main window
+                window.alert("First create the new window, then show alert in it");
+            }
+            else{
+                win.alert("This is an alert");
+            }
+        }
+        //close window
+        function closewin(){
+            win.close();
+        }
+    </script>
+</head>
+<body>
+    <button onclick="createWindow()">Open a window</button>
+    <button onclick="closewin()">Close the window</button>
+    <button onclick="showAlert()">Show alert in window</button>
+    
+</body>
+</html>
